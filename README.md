@@ -31,6 +31,40 @@ An elegant, full-stack demonstration web application for a premium patisserie an
 
 ---
 
+## 🔑 Demo Login Credentials
+
+### Live Demo
+🔗 [https://crown-and-crust.vercel.app](https://crown-and-crust.vercel.app)
+*(replace with your actual Vercel URL)*
+
+### Staff / Admin Dashboard
+Access at: `/login`
+
+| Field    | Value                        |
+|----------|------------------------------|
+| Email    | admin@crownandcrust.com     |
+| Password | Admin@123                    |
+
+Once logged in, you'll be redirected to `/dashboard`, which includes:
+- **Overview** — stat cards for foods, employees, orders, income, expense, profit
+- **Foods** — add/edit/delete menu items
+- **Employees** — manage staff and salaries
+- **Finance** — income vs expense tracking
+- **Orders** — view and update order statuses
+- **Feedback** — view and moderate customer reviews
+
+### Customer Storefront
+Access at: `/customer/login`
+
+| Field    | Value                    |
+|----------|--------------------------|
+| Email    | customer@test.com       |
+| Password | Customer@123              |
+
+Browse the menu at `/customer/menu`, filter by category, add items to cart, checkout (simulated payment), and view order history at `/customer/orders`.
+
+---
+
 ## Setup Instructions
 
 ### 1. Database Setup (Supabase)
@@ -59,20 +93,3 @@ npm run dev
 ---
 
 ## Folder Structure
-```
-src/
-├── components/          # Reusable UI widgets & layouts (Button, Modal, Navbar, layouts)
-├── contexts/            # React Context (AuthContext for session and user profiles)
-├── hooks/               # Custom hooks for querying DB
-├── pages/               # Page components grouped by Customer/Staff portals
-├── services/            # Supabase API services (auth, food, employee, orders, feedback)
-├── store/               # Zustand state storage (Cart state persistence)
-├── index.css            # Custom CSS styles, Google fonts, components layer
-├── main.jsx             # Entrypoint
-└── App.jsx              # Router & Query client definitions
-```
-
----
-
-## Payment Flow Note (Demonstration Placeholder)
-This application implements a **purely simulated payment checkout**. It validates card number layouts, CVVs, expiries, or UPI handles visually, displays a processing animation, and inserts the order record into the Supabase database with a status flag of `paid`. No real payment transactions occur. Look at `src/pages/customer/Checkout.jsx` to see where a real payment integration API (like Stripe or Razorpay) should be wired.
