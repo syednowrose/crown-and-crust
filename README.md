@@ -1,4 +1,4 @@
-# Crown & Crust — Luxury Bakery Management Web Application
+# Crown & Crust —  Bakery Management Web Application
 
 An elegant, full-stack demonstration web application for a premium patisserie and bakery brand, designed for a college portfolio. 
 
